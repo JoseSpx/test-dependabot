@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/JoseSpx/test-dependabot/issues"
   },
-  "homepage": "https://github.com/JoseSpx/test-dependabot#readme"
+  "homepage": "https://github.com/JoseSpx/test-dependabot#readme",
+  "dependencies": {
+    "axios": "^1.2.0",
+    "express": "^4.1.0"
+  }
 }
