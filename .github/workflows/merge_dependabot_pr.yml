@@ -1,6 +1,11 @@
 name: Merge dependabot pr
 on: 
   workflow_dispatch:
+    inputs:
+      environment:
+        description: "The AWS environment to run against, e.g. dev, stage, or prod"
+        required: true
+        default: "dev"
   # pull_request_target:
 
 permissions:
@@ -10,7 +15,8 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    # if: ${{ github.actor == 'dependabot[bot]' }}
+    if: github.event.inputs.environment == 'dev'
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
