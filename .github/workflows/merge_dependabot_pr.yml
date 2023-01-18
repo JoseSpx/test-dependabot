@@ -1,7 +1,6 @@
 name: Merge dependabot pr
 on: 
-  pull_request_target:
-  workflow_dispatch:
+  workflow_dispatch
 
 permissions:
   pull-requests: write
