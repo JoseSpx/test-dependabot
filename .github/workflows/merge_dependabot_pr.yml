@@ -10,7 +10,7 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
     # if: ${{ github.actor == 'dependabot[bot]' }}
-    if: 'true' === 'true'
+    if: 'true' == 'true'
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
